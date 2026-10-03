@@ -29,6 +29,7 @@ const register = async (req, res, next) => {
       token,
     });
   } catch (error) {
+    consoll.log(error)
     next(error);
   }
 };
