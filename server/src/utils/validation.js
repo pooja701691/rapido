@@ -15,9 +15,14 @@ const isValidEmail = (email) => {
 
 const isValidPhone = (phone) => /^[0-9]{10}$/.test(normalizePhone(phone));
 
+const isValidPassword = (password) => {
+  return typeof password === 'string' && password.length >= 6 && password.length <= 128;
+};
+
 module.exports = {
   normalizeEmail,
   normalizePhone,
   isValidEmail,
   isValidPhone,
+  isValidPassword,
 };
